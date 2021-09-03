@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
     public:
-    vector<int> majorityElement(vector<int>& nums) {
+    vector<int> majorityElement_org(vector<int>& nums) {
         if(nums.size()==1){
             return nums;
         }
@@ -36,6 +36,19 @@ class Solution
         }
         return res;
     }
+    vector<int> majorityElement(vector<int>& nums){
+        map<int,int> _map;
+        vector<int> res;
+        for(auto x :nums){
+            _map[x]++;
+        }
+        for(auto x:_map){
+            if(x.second>nums.size()/3){
+                res.push_back(x.first);
+            }
+        }
+        return res;
+    }
     
 };
 int main(){
@@ -48,5 +61,10 @@ int main(){
     vector<int> x = solution.majorityElement(nums);
     system("pause");
 }
+//Org
 //Runtime: 37 ms, faster than 5.34% of C++ online submissions for Majority Element II.
+//Memory Usage: 16 MB, less than 9.87% of C++ online submissions for Majority Element II.
+
+//Ref Net whit map .first .second inhance for auto 
+//Runtime: 12 ms, faster than 73.07% of C++ online submissions for Majority Element II.
 //Memory Usage: 16 MB, less than 9.87% of C++ online submissions for Majority Element II.
