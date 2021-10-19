@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "utility": "cpp",
+        "map": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp",
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "iosfwd": "cpp",
+        "queue": "cpp",
+        "string": "cpp",
+        "deque": "cpp",
+        "cstdlib": "cpp"
+    }
+}
